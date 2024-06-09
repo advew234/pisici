@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Hartă - Pisici</title>
+    <style>
+        body {
+            background-color: #F0F8FF;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        #map {
+            height: 500px;
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwvlpYASfOgbZK7D311u36RmkAy7RMHQI"></script>
+    <script>
+        function initMap() {
+            var location = {lat: 45.7489, lng: 21.2087}; // Timisoara
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <h1>Hartă - Pisici</h1>
+    <div id="map"></div>
+    <p><a href="index.html">Înapoi la cuprins</a></p>
+</body>
+</html>
